@@ -1,5 +1,6 @@
 FROM centos:7
-MAINTAINER Doug Goldstein <cardoe@cardoe.com>
+LABEL maintainer.name="Doug Goldstein" \
+      maintainer.email="cardoe@cardoe.com"
 
 # update repo and install Xen depends
 RUN yum -y update; yum clean all;
