@@ -33,6 +33,9 @@ RUN rpm --rebuilddb && \
         patch \
     && yum clean all
 
+# hack to deal with $CC --version in scripts/travis-build
+ENV CC gcc
+
 RUN mkdir /build
 WORKDIR /build
 
